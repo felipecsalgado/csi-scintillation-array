@@ -1,0 +1,60 @@
+#
+# Macro file for "CsI stack array" 
+# (can be run in batch, without graphic)
+#
+# Created by: Felipe Salgado (FSU Jena, Helmholtz Institute Jena)
+
+
+# Control commands
+/control/verbose 2
+/run/verbose 2
+
+# Defines the physics list to use
+# For magnet fields and particle energies in the 
+# range of few-MeV to few-Gev, opt4 is a good choice
+/testem/phys/addPhysics emstandard_opt4
+
+# Defines the production cuts for gamma-photons inside the material
+/run/setCut 100 um
+
+
+########################################
+#
+# Defines scoring mesh
+/score/create/boxMesh boxMesh_1		# Name of the scoring mesh
+/score/mesh/boxSize 20. 20 3 cm		# Size of the scoring mesh. Try to cover the entire calorimeter
+#/score/mesh/translate/xyz 0 0 0. mm    # Position of the scoring mesh within the world
+/score/mesh/nBin 300 300 10             # Number of bins of the scoring mesh.
+
+# Quantity to be scored. 
+/score/quantity/energyDeposit eDep 	
+
+# If we want to get the energy deposited by a specific particle
+# Please add the following filters
+#/score/filter/particle eMinusFilter e-
+#/score/filter/particle ePlusFilter e+
+#/score/filter/particle gammaFilter gamma
+
+# Close the scoring
+/score/close				
+/score/list
+
+# Initialize the simulation
+/run/initialize
+
+# Configures the primary particle gun
+/gun/particle e-
+/gun/energy 1 GeV
+
+/gun/position -25 0 0 cm	# For direct hit of the particle in the scintillation stack
+#/gun/position -65 0 0 cm	# For hits on the stack of the brems-ray produced by the primary interacting with the tungten converter target
+
+# Configures the root filename.
+# Not important for our simulations
+/analysis/setFileName run01
+
+/run/printProgress 100		# Output progress
+
+/run/beamOn 5000		# Run simulation with the specified number of primaries
+
+/score/dumpQuantityToFile boxMesh_1 eDep eDep.txt	# Save the scoring mesh in a txt file

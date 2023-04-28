@@ -1,0 +1,7 @@
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/rebuild_cache.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/install.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/list_install_components.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/TestEm3.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/install/strip.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/install/local.dir
+/raid/home/fsalgado/GEANT4/GEANT4-projects/Gamma-Spectrometer/build/CMakeFiles/edit_cache.dir
