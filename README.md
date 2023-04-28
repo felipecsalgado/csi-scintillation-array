@@ -52,14 +52,14 @@ To plot a 2D integrated view of the deposited energy, run the python script `plo
 
     python3 plot_Edep.py
 
-![Screen](Edep.PNG)
+![Edep](build/Edep.png)
 
 Please modify the script to save and post-process the energy deposited accordingly to your needs.
 
 ---
 
 ## Credits
-**Felipe C. Salgado** (Friedrich-Schiller-Universit‰t Jena, Helmholtz Institute Jena)
+**Felipe C. Salgado** (Friedrich-Schiller-Universit√§t Jena, Helmholtz Institute Jena)
 
 ## For more information
 **GEANT4:** https://geant4-userdoc.web.cern.ch/UsersGuides/InstallationGuide/html/index.html
